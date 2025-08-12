@@ -110,13 +110,13 @@
         
         .bottom-row {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 0.5rem;
             margin-bottom: 0.5rem;
         }
-        
+
         .button-zero {
-            grid-column: span 1;
+            grid-column: span 2;
         }
         
         .button-equals {
@@ -273,7 +273,8 @@
         }
 
         // Рендер приложения
-        ReactDOM.render(<Calculator />, document.getElementById('root'));
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<Calculator />);
     </script>
 </body>
 </html>
